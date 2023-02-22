@@ -1,0 +1,410 @@
+[
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Managers",
+    "permissions": [
+      25,
+      26,
+      27,
+      28,
+      45,
+      46,
+      47,
+      48,
+      29,
+      30,
+      31,
+      32,
+      37,
+      49,
+      38,
+      39,
+      40,
+      33,
+      34,
+      35,
+      36,
+      41,
+      42,
+      43,
+      44
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$DYBAbyd4tm4W$0BISZAKzxXs/I8+lpMohsDR8QfwKTiWd3eRCQVCzTUY=",
+    "last_login": "2020-09-17T12:14:43.023Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@admin.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-09-17T09:11:17.431Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$JXpaxo0SCEyv$is/bqK44lh5SmVKAcBiguynXQ5G8XO4EU1ML2zk1y8Y=",
+    "last_login": "2020-09-17T12:04:48.102Z",
+    "is_superuser": false,
+    "username": "manager",
+    "first_name": "",
+    "last_name": "",
+    "email": "manager@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-09-17T11:58:21Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$dkF6w4l2cXoc$B8E8U37IwRCYhG3KtYcZjN2IhojsbVp1Wh+a985uRWY=",
+    "last_login": "2020-09-17T12:15:28.198Z",
+    "is_superuser": false,
+    "username": "user",
+    "first_name": "",
+    "last_name": "",
+    "email": "user@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-09-17T12:15:27.945Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 1,
+  "fields": {
+    "name": "Fantasy"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 2,
+  "fields": {
+    "name": "Adventure"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 3,
+  "fields": {
+    "name": "Thriller"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 4,
+  "fields": {
+    "name": "Science Fiction"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 5,
+  "fields": {
+    "name": "Romance"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 6,
+  "fields": {
+    "name": "Detective Fiction"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 7,
+  "fields": {
+    "name": "History"
+  }
+},
+{
+  "model": "catalog.language",
+  "pk": 1,
+  "fields": {
+    "name": "English"
+  }
+},
+{
+  "model": "catalog.language",
+  "pk": 2,
+  "fields": {
+    "name": "Russian"
+  }
+},
+{
+  "model": "catalog.language",
+  "pk": 3,
+  "fields": {
+    "name": "French"
+  }
+},
+{
+  "model": "catalog.language",
+  "pk": 4,
+  "fields": {
+    "name": "Spanish"
+  }
+},
+{
+  "model": "catalog.language",
+  "pk": 5,
+  "fields": {
+    "name": "Japanese"
+  }
+},
+{
+  "model": "catalog.book",
+  "pk": 1,
+  "fields": {
+    "title": "The Lord of the Rings",
+    "author": 1,
+    "summary": "The title names the story's main antagonist, the Dark Lord Sauron, who had in an earlier age created the One Ring to rule the other Rings of Power as the ultimate weapon in his campaign to conquer and rule all of Middle-earth. From homely beginnings in the Shire, a hobbit land reminiscent of the English countryside, the story ranges across Middle-earth, following the quest mainly through the eyes of the hobbits Frodo, Sam, Merry and Pippin.",
+    "isbn": "9780544003415",
+    "language": 1,
+    "genre": [
+      1
+    ]
+  }
+},
+{
+  "model": "catalog.book",
+  "pk": 2,
+  "fields": {
+    "title": "Les Misérables",
+    "author": 2,
+    "summary": "Examining the nature of law and grace, the novel elaborates upon the history of France, the architecture and urban design of Paris, politics, moral philosophy, antimonarchism, justice, religion, and the types and nature of romantic and familial love. Les Misérables has been popularized through numerous adaptations for film, television and the stage, including a musical.",
+    "isbn": "9086425874862",
+    "language": 3,
+    "genre": [
+      5
+    ]
+  }
+},
+{
+  "model": "catalog.book",
+  "pk": 3,
+  "fields": {
+    "title": "Война и миръ",
+    "author": 3,
+    "summary": "The novel chronicles the French invasion of Russia and the impact of the Napoleonic era on Tsarist society through the stories of five Russian aristocratic families. Portions of an earlier version, titled The Year 1805, were serialized in The Russian Messenger from 1865 to 1867, then published in its entirety in 1869.",
+    "isbn": "9572365581214",
+    "language": 2,
+    "genre": [
+      5,
+      7
+    ]
+  }
+},
+{
+  "model": "catalog.book",
+  "pk": 4,
+  "fields": {
+    "title": "Test",
+    "author": 4,
+    "summary": "Test",
+    "isbn": "1234567890123",
+    "language": 1,
+    "genre": [
+      3
+    ]
+  }
+},
+{
+  "model": "catalog.bookinstance",
+  "pk": "3222a3e2-fa94-4d3e-b450-8fb079759535",
+  "fields": {
+    "book": 1,
+    "imprint": "ISBN 0-00-763555-9",
+    "due_back": "2020-09-30",
+    "status": 2,
+    "borrower": 1
+  }
+},
+{
+  "model": "catalog.bookinstance",
+  "pk": "3f9269ba-ae95-47d7-bf17-cf403d46d88b",
+  "fields": {
+    "book": 3,
+    "imprint": "BBC Books",
+    "due_back": null,
+    "status": 1,
+    "borrower": null
+  }
+},
+{
+  "model": "catalog.bookinstance",
+  "pk": "4461378e-ca94-4e9a-b747-2cabe173b00e",
+  "fields": {
+    "book": 3,
+    "imprint": "BBC Books",
+    "due_back": null,
+    "status": 3,
+    "borrower": null
+  }
+},
+{
+  "model": "catalog.bookinstance",
+  "pk": "4a249639-dde4-4244-b3bb-1feb87af0ba5",
+  "fields": {
+    "book": 3,
+    "imprint": "BBC Books",
+    "due_back": "2020-09-18",
+    "status": 2,
+    "borrower": 1
+  }
+},
+{
+  "model": "catalog.bookinstance",
+  "pk": "7ef975b0-b128-41d4-96b8-50cf421bd19c",
+  "fields": {
+    "book": 2,
+    "imprint": "OKI ES3640XF-Serie",
+    "due_back": null,
+    "status": 3,
+    "borrower": null
+  }
+},
+{
+  "model": "catalog.bookinstance",
+  "pk": "834a520b-1efa-4bb0-806c-03d8c6679681",
+  "fields": {
+    "book": 1,
+    "imprint": "ISBN 0-00-763555-9",
+    "due_back": null,
+    "status": 3,
+    "borrower": null
+  }
+},
+{
+  "model": "catalog.bookinstance",
+  "pk": "845b6271-508c-4198-9436-6ae08ebc374f",
+  "fields": {
+    "book": 4,
+    "imprint": "test",
+    "due_back": null,
+    "status": 1,
+    "borrower": null
+  }
+},
+{
+  "model": "catalog.bookinstance",
+  "pk": "9eeac27b-5fc3-489c-8892-f91eeb29be89",
+  "fields": {
+    "book": 1,
+    "imprint": "ISBN 0-00-763555-9",
+    "due_back": null,
+    "status": 1,
+    "borrower": null
+  }
+},
+{
+  "model": "catalog.bookinstance",
+  "pk": "b4ac076a-798e-44f4-83b9-5090dbe07f09",
+  "fields": {
+    "book": 2,
+    "imprint": "OKI ES3640XF-Serie",
+    "due_back": "2020-09-21",
+    "status": 2,
+    "borrower": 1
+  }
+},
+{
+  "model": "catalog.bookinstance",
+  "pk": "cbb729c9-cb6a-43bb-96bb-fc6e4eba27c5",
+  "fields": {
+    "book": 1,
+    "imprint": "ISBN 0-00-763555-9",
+    "due_back": null,
+    "status": 1,
+    "borrower": null
+  }
+},
+{
+  "model": "catalog.bookinstance",
+  "pk": "fef3e641-71d2-4e50-97e2-cfdfc7a7772d",
+  "fields": {
+    "book": 2,
+    "imprint": "OKI ES3640XF-Serie",
+    "due_back": null,
+    "status": 1,
+    "borrower": null
+  }
+},
+{
+  "model": "catalog.author",
+  "pk": 1,
+  "fields": {
+    "first_name": "John",
+    "last_name": "Tolkien",
+    "date_of_birth": "1892-01-03",
+    "date_of_death": "1973-09-02"
+  }
+},
+{
+  "model": "catalog.author",
+  "pk": 2,
+  "fields": {
+    "first_name": "Victor",
+    "last_name": "Hugo",
+    "date_of_birth": "1802-02-26",
+    "date_of_death": "1885-05-22"
+  }
+},
+{
+  "model": "catalog.author",
+  "pk": 3,
+  "fields": {
+    "first_name": "Leo",
+    "last_name": "Tolstoy",
+    "date_of_birth": "1828-09-09",
+    "date_of_death": "1910-10-20"
+  }
+},
+{
+  "model": "catalog.author",
+  "pk": 4,
+  "fields": {
+    "first_name": "Leo",
+    "last_name": "Test",
+    "date_of_birth": "1990-01-01",
+    "date_of_death": null
+  }
+},
+{
+  "model": "catalog.authorprofile",
+  "pk": 1,
+  "fields": {
+    "author": 1,
+    "about": "J. R. R. Tolkien served as the Rawlinson and Bosworth Professor of Anglo-Saxon and Fellow of Pembroke College, Oxford, from 1925 to 1945 and Merton Professor of English Language and Literature and Fellow of Merton College, Oxford, from 1945 to 1959. He was at one time a close friend of C. S. Lewis—they were both members of the informal literary discussion group known as the Inklings. Tolkien was appointed a Commander of the Order of the British Empire by Queen Elizabeth II on 28 March 1972."
+  }
+},
+{
+  "model": "catalog.authorprofile",
+  "pk": 2,
+  "fields": {
+    "author": 2,
+    "about": "Hugo is considered to be one of the greatest and best-known French writers. Outside France, his most famous works are the novels Les Misérables, 1862, and The Hunchback of Notre-Dame (French: Notre-Dame de Paris), 1831. In France, Hugo is renowned for his poetry collections, such as Les Contemplations (The Contemplations) and La Légende des siècles (The Legend of the Ages). Hugo was at the forefront of the Romantic literary movement with his play Cromwell and drama Hernani. Many of his works have inspired music, both during his lifetime and after his death, including the musicals Les Misérables and Notre-Dame de Paris. He produced more than 4,000 drawings in his lifetime, and campaigned for social causes such as the abolition of capital punishment."
+  }
+}
+]

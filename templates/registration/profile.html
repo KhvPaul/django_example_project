@@ -1,0 +1,9 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+  <p>Username: {{ object.username }}</p>
+  <p>Email: {{ object.email }}</p>
+  <a href="{% url "update_profile" %}">Update my profile</a>
+
+{% endblock %}

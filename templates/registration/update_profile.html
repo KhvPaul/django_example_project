@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+  <form method="POST" class="form-group">
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <button type="submit" class="btn btn-success">Update</button>
+    <a href="{% url 'password_change' %}" class="btn btn-info">Change password</a>
+  </form>
+
+{% endblock %}
