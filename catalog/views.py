@@ -1,24 +1,22 @@
 import datetime
-import time
 
 from django.contrib.messages.views import SuccessMessageMixin
-from django.db import transaction
 
 from catalog.forms import ContactFrom, RegisterForm, RenewBookForm
 from catalog.models import Author, Book, BookInstance
 
 from django.contrib import messages
-from django.contrib.auth import authenticate, login, get_user_model
+from django.contrib.auth import authenticate, get_user_model, login
 from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
-from django.core.mail import BadHeaderError, send_mail
+from django.core.mail import BadHeaderError, send_mail  # noqa: F401
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse, reverse_lazy
 from django.views import generic
 
 
-from .tasks import send_mail as celery_send_mail
+from .tasks import send_mail as celery_send_mail  # noqa: F401
 
 User = get_user_model()
 
@@ -137,7 +135,7 @@ class AuthorListView(generic.ListView):
     """Generic class-based list view for a list of authors."""
 
     model = Author
-    paginate_by = 2
+    paginate_by = 10
 
     def get_queryset(self):
         return super(AuthorListView, self).get_queryset().select_related("authorprofile")

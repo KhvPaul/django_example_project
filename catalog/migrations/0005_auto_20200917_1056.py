@@ -6,21 +6,21 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('catalog', '0004_bookinstance_borrower'),
+        ("catalog", "0004_bookinstance_borrower"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='author',
-            options={'ordering': ['last_name', 'first_name']},
+            name="author",
+            options={"ordering": ["last_name", "first_name"]},
         ),
         migrations.AlterModelOptions(
-            name='bookinstance',
-            options={'ordering': ['due_back'], 'permissions': (('can_mark_returned', 'Set book as returned'),)},
+            name="bookinstance",
+            options={"ordering": ["due_back"], "permissions": (("can_mark_returned", "Set book as returned"),)},
         ),
         migrations.AlterField(
-            model_name='bookinstance',
-            name='status',
-            field=models.PositiveSmallIntegerField(blank=True, choices=[(1, 'Maintenance'), (2, 'On loan'), (3, 'Available'), (4, 'Reserved')], default=1, help_text='Book availability'),
+            model_name="bookinstance",
+            name="status",
+            field=models.PositiveSmallIntegerField(blank=True, choices=[(1, "Maintenance"), (2, "On loan"), (3, "Available"), (4, "Reserved")], default=1, help_text="Book availability"),
         ),
     ]

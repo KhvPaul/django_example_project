@@ -300,9 +300,7 @@ class RenewBookInstancesViewTest(TestCase):
         )
         self.assertRedirects(response, reverse("all-borrowed"))
 
-    def test_HTTP404_for_invalid_book_if_logged_in(self):
-        import uuid
-
+    def test_HTTP404_for_invalid_book_if_logged_in(self):  # noqa: N802
         test_uid = uuid.uuid4()  # unlikely UID to match our bookinstance!
         login = self.client.login(username="testuser2", password="2HJ1vRV0Z&3iD")
         response = self.client.get(reverse("renew-book-librarian", kwargs={"pk": test_uid}))

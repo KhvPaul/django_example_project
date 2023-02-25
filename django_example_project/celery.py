@@ -4,7 +4,7 @@ from datetime import timedelta
 from celery import Celery
 
 # set the default Django settings module for the "celery" program.
-from celery.schedules import crontab
+from celery.schedules import crontab  # noqa: I202
 
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_example_project.settings")
@@ -50,4 +50,4 @@ app.conf.beat_schedule = {
 
 @app.task(bind=True)
 def debug_task(self):
-    print(f"Request: {self.request!r}")  # noqa: T001
+    print(f"Request: {self.request!r}")  # noqa: T001, T201

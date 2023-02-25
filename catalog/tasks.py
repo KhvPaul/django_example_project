@@ -38,7 +38,7 @@ def parse_news():
     r = requests.get("https://news.ycombinator.com/rss")
     soup = BeautifulSoup(r.content, features="xml")
     articles = soup.findAll("item")
-    print(soup.find("title").text)  # noqa: F401
+    print(soup.find("title").text)  # noqa: F401,T201
     for a in articles:
-        print(a.title.text, a.link.text)
+        print(a.title.text, a.link.text)  # noqa: T201
     return len(articles)

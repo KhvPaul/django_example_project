@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     "django_celery_results",
 
     "catalog.apps.CatalogConfig",
+    "example",
 ]
 # fmt: on
 
@@ -162,6 +163,10 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 STATIC_URL = "/static/"
 
+MEDIA_ROOT = BASE_DIR / "media"
+
+MEDIA_URL = "/media/"
+
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
@@ -210,6 +215,6 @@ CELERY_TIMEZONE = TIME_ZONE
 
 
 try:
-    from local_settings import *
+    from local_settings import *  # noqa: F401,F403
 except ImportError:
     pass

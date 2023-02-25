@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Static Example</title>
+</head>
+<body>
+<p>{{ file.name }}</p>
+<p>{{ file.image.path }}</p>
+<p>{{ file.image.name }}</p>
+<p>{{ file.image.url }}</p>
+<img src="{{ file.image.url }}" alt="">
+
+
+{#    <img src="{% static "images/heart.svg" %}" alt="Image">#}
+</body>
+</html>

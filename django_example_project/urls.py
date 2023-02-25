@@ -31,12 +31,15 @@ urlpatterns = [
     path("accounts/register/", RegisterFormView.as_view(), name="register"),
     path("accounts/update_profile/", UpdateProfile.as_view(), name="update_profile"),
     path("accounts/my_profile/", UserProfile.as_view(), name="profile"),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path("example/", include("example.urls")),
+]
 
 if settings.DEBUG:
     import debug_toolbar
 
+    # fmt: off
     urlpatterns += [
         path("__debug__/", include(debug_toolbar.urls)),
         path("silk/", include("silk.urls", namespace="silk")),
-    ]
+    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # noqa: E501
+    # fmt: on
