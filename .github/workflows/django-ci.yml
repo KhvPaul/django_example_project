@@ -19,5 +19,8 @@ jobs:
     - name: Install dependencies
       run: pip install tox
 
+    - name: Collect static files
+      run: python manage.py collectstatic --noinput
+
     - name: Run tox
       run: tox
